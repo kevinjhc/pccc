@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philadelphia Peace Plaza</title>
+  <meta name="description" content="A contemplative public space and home of the Statue of Peace at 805 S. Front Street in Queen Village, Philadelphia.">
+  <meta name="theme-color" content="#e6e9ee">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Figtree:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Fixed atmospheric light. Each layer is a static gradient field; only opacity changes between sections. -->
+<div class="sky" aria-hidden="true">
+  <div class="sky__layer is-active" data-layer="dawn"></div>
+  <div class="sky__layer" data-layer="peach"></div>
+  <div class="sky__layer" data-layer="rose"></div>
+  <div class="sky__layer" data-layer="sage"></div>
+  <div class="sky__layer" data-layer="dusk"></div>
+  <div class="sky__grain"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="16" cy="16" r="3" fill="currentColor"/></svg>
+      <span>Philadelphia Peace Plaza</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-toggle__label">menu</span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="visit.html">Visit</a>
+      <a href="#about">About</a>
+      <a href="#history">History</a>
+      <a href="#programs">Programs</a>
+      <a class="pill pill--ink" href="#involved">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO: blurred rendering as a color field, type split around a thin center mark -->
+  <section class="hero" data-mood="dawn">
+    <div class="hero__field" aria-hidden="true">
+      <img src="../images/view-east.jpg" alt="">
+    </div>
+    <div class="hero__inner wrap">
+      <p class="mono hero__where">805 s. front street &middot; queen village, philadelphia</p>
+      <h1 class="split">
+        <span class="split__a">a place to remember,</span>
+        <span class="split__mark" aria-hidden="true"></span>
+        <span class="split__b">reflect, and gather.</span>
+      </h1>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="hero__lede">The Philadelphia Peace Plaza is home to the Statue of Peace and a public garden in Queen Village.</p>
+      <div class="actions actions--center">
+        <a class="pill pill--white" href="visit.html">plan your visit</a>
+        <a class="pill pill--ghost" href="https://maps.google.com/?q=805+S+Front+St+Philadelphia+PA+19147">directions</a>
+      </div>
+    </div>
+    <div class="wrap hero__facts-wrap">
+      <dl class="facts frost">
+        <div><dt class="mono">hours</dt><dd>Open daily</dd></div>
+        <div><dt class="mono">admission</dt><dd>Always free</dd></div>
+        <div><dt class="mono">location</dt><dd>805 S. Front Street<br>Queen Village, Philadelphia</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- The blurred field comes into focus -->
+  <section class="focus" data-mood="dawn">
+    <div class="wrap">
+      <figure class="focus__frame">
+        <img src="../images/view-east.jpg" alt="Rendering of the plaza: the Statue of Peace on its base, musicians playing behind her, and visitors on curved benches" width="1800" height="1012">
+        <figcaption class="mono">rendering: TEND landscape architects</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about" data-mood="peach">
+    <div class="wrap">
+      <div class="purpose">
+        <div class="purpose__panel frost">
+          <p class="kicker">Our purpose</p>
+          <p class="purpose__text">Honoring the victims of sexual slavery during World War II, and welcoming everyone who seeks peace.</p>
+          <a class="pill pill--ink" href="#history">read the history</a>
+        </div>
+        <figure class="purpose__photo soft-photo">
+          <img src="../images/concert-strings.jpg" alt="String and accordion quartet playing under trees at the site" loading="lazy" width="962" height="299">
+        </figure>
+      </div>
+
+      <ol class="intents frost frost--thin">
+        <li>
+          <span class="mono">i.</span>
+          <h3 class="intent__title">Remember</h3>
+          <p>Give voice to the victims of sexual violence and support peacemaking across communities.</p>
+        </li>
+        <li>
+          <span class="mono">ii.</span>
+          <h3 class="intent__title">Reflect</h3>
+          <p>A contemplative space for the forgotten faces of armed conflict, inviting visitors to help end inequality, violence, and enslavement.</p>
+        </li>
+        <li>
+          <span class="mono">iii.</span>
+          <h3 class="intent__title">Come together</h3>
+          <p>Communities seeing each other beyond national and cultural identities, and building lasting peace through open dialogue.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- STATUE: inscription on a frosted panel over a softly blurred photograph -->
+  <section class="section statue" data-mood="rose" aria-labelledby="statue-title">
+    <div class="statue__field" aria-hidden="true"><img src="../images/statue.jpg" alt="" loading="lazy"></div>
+    <div class="wrap statue__grid">
+      <div class="statue__intro">
+        <p class="kicker">The memorial</p>
+        <h2 class="h2" id="statue-title">The Statue of Peace</h2>
+        <p class="muted">Created in 2011 by Seokyung Kim and Eunsung Kim. The sculpture is now in 17 places around the world, including 6 in the United States.</p>
+        <figure class="statue__photo">
+          <img src="../images/statue.jpg" alt="Bronze Statue of Peace: a seated girl in hanbok beside an empty wooden chair, flowers at her feet" loading="lazy" width="960" height="716">
+        </figure>
+        <div class="statue__chair">
+          <h3 class="h3">An empty chair beside her</h3>
+          <p class="muted">A bronze girl sits with her fists resting on her knees. A small bird sits on her shoulder, and the chair beside her is empty. Visitors are invited to sit with her.</p>
+        </div>
+      </div>
+      <figure class="inscription frost frost--deep">
+        <figcaption class="mono">inscription</figcaption>
+        <blockquote>
+          <p>This statue commemorates hundreds of thousands of girls and women from Asia, Oceania, and Europe who fell victim to the systemic sexual slavery by the Japanese Imperial Army from 1931 to 1945. Starting in 1991, the survivors broke the cycle of shame and silence by testifying and urged the world to protect the future generations of women by facing the past and to build lasting peace.</p>
+        </blockquote>
+        <p class="inscription__sig"><span class="rule rule--short" aria-hidden="true"></span>Philadelphia Peace Plaza Committee</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- HISTORY: dusk field, a single line of light for the timeline -->
+  <section class="section history" id="history" data-mood="dusk">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">History</p>
+          <h2 class="h2">Breaking decades of silence</h2>
+        </div>
+        <p class="muted">During World War II, girls and women across Asia, Oceania, and Europe were coerced into sexual slavery by the Imperial Japanese Army. For decades their stories went untold.</p>
+      </div>
+
+      <dl class="stats">
+        <div><dt class="stat__num">200,000+</dt><dd>girls and women</dd></div>
+        <div><dt class="stat__num">21</dt><dd>countries affected</dd></div>
+        <div><dt class="stat__num">17</dt><dd>Statues of Peace worldwide</dd></div>
+      </dl>
+
+      <h3 class="mono timeline-label">timeline &middot; 1991&ndash;2022</h3>
+      <ol class="timeline">
+        <li class="year">
+          <span class="year__num">1991</span>
+          <div class="year__body"><p>Survivor Kim Haksoon gives her public testimony. Survivors around the world begin to come forward.</p></div>
+        </li>
+        <li class="year">
+          <span class="year__num">2011</span>
+          <div class="year__body"><p>The Statue of Peace is created and installed in Seoul, South Korea.</p><img src="../images/statue.jpg" alt="" loading="lazy"></div>
+        </li>
+        <li class="year">
+          <span class="year__num">2017</span>
+          <div class="year__body"><p>The Committee enters Philadelphia's public art donation process, selects 805 S. Front Street, and begins outreach in Queen Village.</p></div>
+        </li>
+        <li class="year">
+          <span class="year__num">2019</span>
+          <div class="year__body"><p>TEND landscape architects joins to design the plaza.</p><img class="is-plan" src="../images/plan.jpg" alt="" loading="lazy"></div>
+        </li>
+        <li class="year">
+          <span class="year__num">2021</span>
+          <div class="year__body"><p>The Philadelphia Art Commission gives the project unanimous conceptual approval. The Committee becomes an independent organization.</p></div>
+        </li>
+        <li class="year">
+          <span class="year__num">2022</span>
+          <div class="year__body"><p>The Committee presents at a City-hosted Town Hall and returns to the Art Commission for a second review.</p><img src="../images/community-market.jpg" alt="" loading="lazy"></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- DESIGN -->
+  <section class="section" id="design" data-mood="sage">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The plaza</p>
+          <h2 class="h2">A garden for quiet, shade, and gathering</h2>
+        </div>
+        <p class="muted">Designed by TEND landscape architects with neighbors in Queen Village, who already call the site &ldquo;the Sanctuary.&rdquo;</p>
+      </div>
+
+      <div class="views-grid">
+        <figure class="views-grid__main soft-photo">
+          <img src="../images/view-south.jpg" alt="Rendering of the plaza from Front Street with native plantings and a sidewalk" loading="lazy" width="1800" height="1012">
+          <figcaption class="mono">looking south along front street</figcaption>
+        </figure>
+        <figure class="soft-photo">
+          <img src="../images/view-southeast.jpg" alt="Rendering of the statue on its base with an etched metal sign and wood benches" loading="lazy" width="1800" height="1012">
+          <figcaption class="mono">the statue and inscription</figcaption>
+        </figure>
+        <figure class="soft-photo">
+          <img src="../images/view-west.jpg" alt="Rendering looking west toward Queen Village rowhomes" loading="lazy" width="1800" height="1012">
+          <figcaption class="mono">toward queen village</figcaption>
+        </figure>
+      </div>
+      <p class="mono credit-line">renderings: TEND landscape architects</p>
+
+      <ul class="features">
+        <li><p class="kicker">Native planting</p><p class="muted">Witch hazel, sweetbay magnolia, black gum, and native grasses bring color and shade in every season.</p></li>
+        <li><p class="kicker">Places to sit</p><p class="muted">Concrete and wood benches curve around the statue, with low lighting for evening visits.</p></li>
+        <li><p class="kicker">Room to gather</p><p class="muted">More green space and shade than the site has today, with room for small concerts and events.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROGRAMS: frosted panels floating over photographs -->
+  <section class="section" id="programs" data-mood="sage">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Programs</p>
+          <h2 class="h2">Free arts and culture at the Plaza</h2>
+        </div>
+        <a class="pill pill--ink" href="mailto:admin@phillypeaceplaza.org?subject=Upcoming%20events">ask about events</a>
+      </div>
+
+      <div class="programs">
+        <article class="program">
+          <img src="../images/concert-rondalla.jpg" alt="Filipino rondalla ensemble playing string instruments outdoors" loading="lazy" width="1600" height="877">
+          <div class="program__panel frost">
+            <p class="kicker">May to October</p>
+            <h3 class="h3">Opening Act</h3>
+            <p class="muted">A small, mostly unamplified monthly concert series with music from France, Korea, Latin America, and the Philippines.</p>
+          </div>
+        </article>
+        <article class="program">
+          <img src="../images/community-picnic.jpg" alt="Families sitting on a picnic blanket beneath Peace Plaza bunting" loading="lazy" width="1280" height="786">
+          <div class="program__panel frost">
+            <p class="kicker">Every June</p>
+            <h3 class="h3">AhnNyeong! Korea in Queen Village</h3>
+            <p class="muted">Korean dance, music, and games for all ages during Immigrant Heritage Month.</p>
+          </div>
+        </article>
+        <article class="program">
+          <img src="../images/hands.jpg" alt="Visitors wearing wristbands hold the statue's bronze hands" loading="lazy" width="638" height="593">
+          <div class="program__panel frost">
+            <p class="kicker">Poetry</p>
+            <h3 class="h3">The World After You Spoke</h3>
+            <p class="muted">A poetry video by Philadelphia poets Michelle Meyer and Yolanda Wisher, marking 30 years since Kim Haksoon's testimony.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBOR QUOTE: photograph dissolving into light -->
+  <section class="dissolve" data-mood="peach">
+    <div class="dissolve__photo" aria-hidden="true">
+      <img src="../images/concert-strings.jpg" alt="" loading="lazy">
+    </div>
+    <div class="wrap dissolve__inner">
+      <figure class="neighbor">
+        <blockquote><p>&ldquo;I loved the music outside my house.&rdquo;</p></blockquote>
+        <figcaption>
+          <span class="rule rule--short" aria-hidden="true"></span>
+          <p>A neighbor across the street. Since 2018 we have held on-site hours, knocked on doors, joined block cleanups, and met with the Queen Village Neighbors Association and Asian community groups across the city.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section class="section" id="involved" data-mood="dawn">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <p class="kicker">Get involved</p>
+        <h2 class="h2">Help care for the Plaza</h2>
+      </div>
+
+      <div class="involve frost">
+        <div class="involve__item involve__item--lead">
+          <p class="mono">01</p>
+          <h3 class="h3">Donate</h3>
+          <p class="muted">Gifts fund free programs and long-term care of the statue and garden. The Queen Village Neighbors Association is our fiscal sponsor.</p>
+          <a class="pill pill--ink" href="mailto:admin@phillypeaceplaza.org?subject=Donation">make a gift</a>
+        </div>
+        <div class="involve__item">
+          <p class="mono">02</p>
+          <h3 class="h3">Volunteer</h3>
+          <p class="muted">Help with garden days, events, and on-site welcome hours.</p>
+          <a class="pill pill--ghost" href="mailto:admin@phillypeaceplaza.org?subject=Volunteering">join us</a>
+        </div>
+        <div class="involve__item">
+          <p class="mono">03</p>
+          <h3 class="h3">Partner</h3>
+          <p class="muted">Community and cultural groups can host performances, conversations, or resource tables at the Plaza.</p>
+          <a class="pill pill--ghost" href="mailto:admin@phillypeaceplaza.org?subject=Partnership">get in touch</a>
+        </div>
+      </div>
+
+      <div class="signup">
+        <span class="split__mark split__mark--h" aria-hidden="true"></span>
+        <h2 class="signup__title">Get news and events from the Plaza.</h2>
+        <form class="signup__form" onsubmit="event.preventDefault(); this.outerHTML='<p class=&quot;signup__thanks&quot; role=&quot;status&quot;>Thank you. We’ll be in touch.</p>';">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" placeholder="Email address" autocomplete="email" required>
+          <button class="pill pill--white" type="submit">sign up</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-name">Philadelphia Peace Plaza</p>
+        <p class="muted">805 S. Front Street<br>Queen Village, Philadelphia, PA</p>
+      </div>
+      <div>
+        <h4 class="mono">visit</h4>
+        <ul><li><a href="visit.html#location">Location &amp; hours</a></li><li><a href="visit.html#map">Plaza map</a></li><li><a href="visit.html#nearby">Nearby</a></li></ul>
+      </div>
+      <div>
+        <h4 class="mono">contact</h4>
+        <ul><li><a href="mailto:admin@phillypeaceplaza.org">admin@phillypeaceplaza.org</a></li></ul>
+      </div>
+      <div>
+        <h4 class="mono">follow</h4>
+        <ul><li><a href="https://www.instagram.com/phillypeaceplaza/">Instagram</a></li><li><a href="https://www.facebook.com/PhillyPeacePlaza/">Facebook</a></li><li><a href="https://x.com/PHLPeacePlaza">X</a></li></ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>Philadelphia Peace Plaza Committee. Fiscally sponsored by the Queen Village Neighbors Association.</span>
+      <span>Plaza design by TEND landscape architects</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
