@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philadelphia Peace Plaza · Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --paper: #ffffff;
+    --ink: #1d1f1a;
+    --grey: #5f6158;
+    --line: #dcd7cc;
+    --moss: #33402f;
+    --r: 16px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { font-family: "Hanken Grotesk", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  button { font: inherit; color: inherit; }
+  a { color: inherit; }
+  svg { display: block; }
+
+  /* ---------- Options view ---------- */
+  .options { width: min(1320px, 100% - 32px); margin: 0 auto; padding: 88px 0 140px; }
+  .options > header { margin-bottom: 8px; }
+  .eyebrow { font-size: 1.05rem; font-weight: 600; color: var(--grey); margin: 0 0 12px; }
+  .options h1 { margin: 0; font-weight: 800; font-size: clamp(2.4rem, 6vw, 4.4rem); letter-spacing: -.045em; line-height: .98; }
+  .hero { background: #2F3D2E; color: #EFE6D6; border-radius: var(--r); padding: clamp(32px, 5vw, 72px); }
+  .options .hero h1 { color: #EFE6D6; }
+  .hero-body { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 96px); margin-top: clamp(32px, 5vw, 64px); align-items: start; }
+  .hero .intro { margin: 0; font-size: clamp(1.3rem, 1.95vw, 1.8rem); line-height: 1.4; letter-spacing: -.01em; color: rgba(239,230,214,.88); }
+  .hero-label { margin: 0 0 24px; font-size: 1rem; font-weight: 600; letter-spacing: 0; color: #C9D3BC; }
+  .pillars { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+  .pillars li { display: grid; grid-template-columns: 36px 1fr; gap: 20px; align-items: start; }
+  .pillars span { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(201,211,188,.6); font-size: .8rem; font-weight: 600; color: #C9D3BC; margin-top: -4px; font-variant-numeric: tabular-nums; }
+  .pillars h3 { margin: 0 0 4px; font-weight: 800; font-size: 1.3rem; letter-spacing: -.02em; }
+  .pillars p { margin: 0; color: rgba(239,230,214,.7); line-height: 1.5; }
+  @media (max-width: 860px) { .hero-body { grid-template-columns: 1fr; } }
+  .group { margin-top: 128px; }
+  .group:first-child { margin-top: 72px; }
+  .group-head { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 40px; }
+  .group-head h2 { margin: 0; line-height: 1.1; font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.6rem); letter-spacing: -.035em; }
+  .group-head p { margin: 0; color: var(--grey); max-width: 52ch; }
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 1000px) { .grid.four, .grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .grid, .grid.four, .grid.three { grid-template-columns: 1fr; } }
+  .card { display: flex; flex-direction: column; width: 100%; height: 100%; text-align: left; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; cursor: pointer; padding: 0; transition: transform .25s ease, box-shadow .25s ease; }
+  .card:hover, .card:focus-visible { transform: translateY(-4px); box-shadow: 0 24px 50px -28px rgba(29,31,26,.45); }
+  .card:focus-visible { outline: 3px solid var(--moss); outline-offset: 3px; }
+  .preview { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--line); container-type: inline-size; }
+  .four .preview { aspect-ratio: 1 / 1; }
+  .preview iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform-origin: 0 0; pointer-events: none; }
+  .preview .mark { position: absolute; inset: 18%; }
+  .preview .mark svg { width: 100%; height: 100%; }
+  .card-body { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding: 22px 26px 26px; flex: 1; }
+  .card-body .letter { font-size: .95rem; font-weight: 600; color: var(--grey); }
+  .card-body h3 { margin: 0 0 6px; font-weight: 800; font-size: 1.7rem; letter-spacing: -.03em; }
+  .card-body p { margin: 0; color: var(--grey); line-height: 1.45; max-width: 46ch; }
+  .four .card-body h3 { font-size: 1.35rem; }
+  .four .card-body p { font-size: .95rem; }
+  .card-body .go { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #2F3D2E; color: #EFE6D6; font-size: 1.1rem; }
+
+  /* ---------- Deck view ---------- */
+  .deck { position: fixed; inset: 0; display: none; flex-direction: column; background: var(--ink); color: #fff; }
+  .deck.open { display: flex; }
+  .deck-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; font-size: .95rem; }
+  .deck-bar .crumb { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .deck-bar .crumb span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: .75; }
+  .pill { background: rgba(255,255,255,.1); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; white-space: nowrap; }
+  .pill:hover { background: rgba(255,255,255,.2); }
+  .stage { flex: 1; display: grid; place-items: start center; padding: 0 20px 12px; min-height: 0; }
+  .slide { position: relative; width: min(100%, calc((100vh - 80px) * 16 / 9)); aspect-ratio: 16 / 9; background: var(--s-bg, #fff); color: var(--s-ink, var(--ink)); border-radius: 12px; overflow: hidden; container-type: inline-size; }
+  .deck-foot { display: flex; align-items: center; gap: 12px; }
+  .dots { display: flex; gap: 8px; }
+  .dots button { width: 10px; height: 10px; padding: 0; border-radius: 50%; border: 0; background: rgba(255,255,255,.28); cursor: pointer; }
+  .dots button[aria-current="true"] { background: #fff; }
+  .arrow { width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.1); cursor: pointer; font-size: 1.1rem; }
+  .arrow:hover:not(:disabled) { background: rgba(255,255,255,.22); }
+  .arrow:disabled { opacity: .3; cursor: default; }
+  .count { min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; opacity: .75; }
+
+  /* slide content, sized to the slide width */
+  .s { position: absolute; inset: 0; padding: 6cqw 6.5cqw; display: flex; flex-direction: column; }
+  .s .tag { font-size: 1.3cqw; font-weight: 600; opacity: .65; margin-bottom: 1.6cqw; }
+  .s h3 { margin: 0; font-weight: 800; font-size: 6.2cqw; letter-spacing: -.045em; line-height: .95; }
+  .s h4 { margin: 0 0 1.4cqw; font-weight: 800; font-size: 3.4cqw; letter-spacing: -.035em; line-height: 1; }
+  .s h5 { margin: 0 0 .8cqw; font-weight: 800; font-size: 2.1cqw; letter-spacing: -.025em; line-height: 1.05; }
+  .s p { margin: 0; font-size: 1.6cqw; line-height: 1.45; }
+  .s .lede { font-size: 2.1cqw; max-width: 42ch; margin-top: 2.4cqw; opacity: .85; }
+  .muted { opacity: .72; }
+  .draft { position: absolute; top: 2.2cqw; right: 2.4cqw; font-size: 1.05cqw; font-weight: 600; padding: .5cqw 1.1cqw; border-radius: 999px; border: 1px dashed currentColor; opacity: .55; }
+  .split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 4cqw; align-items: stretch; height: 100%; }
+  .split .copy { display: flex; flex-direction: column; justify-content: space-between; }
+  .meta { display: flex; gap: 3cqw; font-size: 1.3cqw; }
+  .meta b { display: block; font-weight: 600; opacity: .6; margin-bottom: .3cqw; font-size: 1.1cqw; }
+  .thumb { position: relative; border-radius: 1cqw; overflow: hidden; isolation: isolate; transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black); background: #fff; }
+  .thumb iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 1800px; border: 0; transform-origin: 0 0; pointer-events: none; }
+  .proto { padding: 3cqw 3.4cqw; gap: 1.6cqw; }
+  .proto-head { display: flex; justify-content: space-between; align-items: center; gap: 2cqw; }
+  .proto-head h4 { margin: 0; font-size: 2.4cqw; }
+  .tools { display: flex; gap: .8cqw; flex-wrap: wrap; justify-content: flex-end; }
+  .tools button, .tools a { font-size: 1.15cqw; padding: .7cqw 1.4cqw; border-radius: 999px; border: 1px solid currentColor; background: transparent; cursor: pointer; text-decoration: none; opacity: .8; }
+  .tools button[aria-pressed="true"] { background: var(--s-ink, var(--ink)); color: var(--s-bg, #fff); opacity: 1; }
+  .frame::after, .thumb::after { content: ''; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none; box-shadow: 0 0 0 40px var(--s-bg, #fff), inset 0 0 0 1px rgba(0,0,0,.14); }
+  .frame { flex: 1; position: relative; border-radius: .8cqw; overflow: hidden; isolation: isolate; transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black); background: #fff; }
+  .frame iframe { position: absolute; top: 0; left: 0; width: 1440px; border: 0; transform-origin: 0 0; }
+  .ov { grid-template-columns: 1.75fr 1fr; }
+  .ov h3 { font-size: 4.8cqw; }
+  .ov .lede { font-size: 1.8cqw; margin-top: 1.4cqw; max-width: 48ch; }
+  .brandblk { position: relative; }
+  .brandblk .draft { top: 0; right: 0; }
+  .brandblk > h5 { font-size: 1.8cqw; }
+  .brandblk > p { font-size: 1.35cqw; line-height: 1.45; max-width: 62ch; margin: .4cqw 0 0; }
+  .vals.row { flex-direction: row; gap: 2.4cqw; }
+  .vals.row > div { flex: 1; }
+  .vals { display: flex; flex-direction: column; gap: 1.4cqw; margin-top: 2cqw; }
+  .vals > div { border-top: 2px solid currentColor; padding-top: 1cqw; }
+  .vals h5 { margin: 0 0 .3cqw; font-size: 1.6cqw; }
+  .vals p { font-size: 1.25cqw; }
+  .vals p { margin: 0; }
+  .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3cqw; margin-top: auto; }
+  .cols > div { border-top: 2px solid currentColor; padding-top: 1.4cqw; }
+  .ph { opacity: .55; font-style: italic; }
+  .swatches { display: grid; grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); gap: 1.2cqw; margin-top: auto; }
+  .swatches div { display: flex; flex-direction: column; gap: .5cqw; font-size: 1.2cqw; }
+  .swatches i { display: block; aspect-ratio: 1 / 1; border-radius: .8cqw; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+  .fonts { display: flex; flex-direction: column; gap: 1.2cqw; margin-top: 2.4cqw; }
+  .fonts div { display: flex; align-items: baseline; gap: 2cqw; border-bottom: 1px solid currentColor; padding-bottom: 1cqw; }
+  .fonts .aa { font-size: 4.2cqw; line-height: 1; min-width: 9cqw; }
+  .fonts span { font-size: 1.4cqw; }
+  .panel { border-radius: 1.2cqw; overflow: hidden; position: relative; }
+  .apps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2cqw; flex: 1; min-height: 0; margin-top: 2cqw; }
+  .apps > div { display: flex; flex-direction: column; gap: .8cqw; min-height: 0; }
+  .apps .panel { flex: 1; }
+  .apps span.cap { font-size: 1.2cqw; opacity: .7; }
+  .bigmark { display: grid; place-items: center; border-radius: 1.2cqw; }
+  .bigmark svg { width: 62%; height: 62%; }
+  .tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.8cqw; margin-top: auto; }
+  .tiles > div { display: flex; flex-direction: column; gap: .9cqw; }
+  .tiles .t { aspect-ratio: 1 / 1; border-radius: 1cqw; display: grid; place-items: center; }
+  .tiles .t svg { width: 64%; height: 64%; }
+  .tiles span { font-size: 1.25cqw; line-height: 1.3; }
+  .lockups { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2cqw; flex: 1; margin-top: 2cqw; min-height: 0; }
+  .lock { border-radius: 1.2cqw; display: flex; align-items: center; justify-content: center; gap: 2.4cqw; padding: 3cqw; }
+  .lock svg { flex: none; }
+  .lock .wm { font-weight: 800; letter-spacing: -.04em; line-height: .92; }
+  .lock.stack { flex-direction: column; text-align: center; gap: 1.6cqw; }
+  .sizes { display: flex; align-items: flex-end; gap: 2.4cqw; margin-top: 2cqw; }
+  .sizes span { font-size: 1.1cqw; opacity: .6; display: block; text-align: center; margin-top: .6cqw; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+
+<main class="options" id="options">
+  <header class="hero">
+    <h1>Philadelphia Peace Plaza</h1>
+    <div class="hero-body">
+      <p class="intro">Healing begins when a story is told plainly and heard without blame. Over 200,000 girls and women from 21 countries were silenced for decades; the brand makes room for every one of those voices, with conviction and care.</p>
+      <div class="values">
+        <h2 class="hero-label">Brand values</h2>
+        <ol class="pillars">
+        <li><span>01</span><div><h3>Tell it plainly</h3><p>Confident, factual language. Bold type carries the conviction.</p></div></li>
+        <li><span>02</span><div><h3>Every voice heard</h3><p>Survivors' own words come first, in many languages.</p></div></li>
+        <li><span>03</span><div><h3>Heal without blame</h3><p>The aim is repair, not accusation.</p></div></li>
+      </ol>
+      </div>
+    </div>
+  </header>
+  <div id="groups"></div>
+</main>
+
+<section class="deck" id="deck" aria-label="Slides">
+  <div class="deck-bar">
+    <div class="crumb"><button class="pill" id="back">← All options</button><span id="deckTitle"></span></div>
+    <div class="deck-foot">
+      <div class="dots" id="dots"></div>
+      <span class="count" id="count"></span>
+      <button class="arrow" id="prev" aria-label="Previous slide">←</button>
+      <button class="arrow" id="next" aria-label="Next slide">→</button>
+    </div>
+  </div>
+  <div class="stage"><div class="slide" id="slide" role="region" aria-live="polite"></div></div>
+</section>
+
+<script>
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const $ = (id) => document.getElementById(id);
+
+/* ======================= Marks ======================= */
+const RING = [[60.0,13.0],[73.9,15.1],[86.5,21.2],[96.7,30.7],[103.8,42.8],[106.9,56.5],[105.8,70.5],[100.7,83.5],[92.0,94.5],[80.4,102.3],[67.0,106.5],[53.0,106.5],[39.6,102.3],[28.0,94.5],[19.3,83.5],[14.2,70.5],[13.1,56.5],[16.2,42.8],[23.3,30.7],[33.5,21.2],[46.1,15.1]];
+const RISE = [[18,104],[35,104],[35,89],[52,104],[52,89],[52,74],[69,104],[69,89],[69,74],[69,59],[86,104],[86,89],[86,74],[86,59],[86,44],[103,104],[103,89],[103,74],[103,59],[103,44],[103,29]];
+const mVoices = (c = '#2F3D2E', a = '#C4553A', hollow = false) => `<svg viewBox="0 0 120 120" aria-hidden="true">${RING.map(([x, y], i) => i === 0 ? (hollow ? `<circle cx="${x}" cy="${y}" r="3.6" fill="none" stroke="${a}" stroke-width="1.8"/>` : `<circle cx="${x}" cy="${y}" r="4.4" fill="${a}"/>`) : `<circle cx="${x}" cy="${y}" r="4.4" fill="${c}"/>`).join('')}</svg>`;
+const mRising = (c = '#2F3D2E', a = '#C4553A') => `<svg viewBox="0 0 120 120" aria-hidden="true">${RISE.map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="6" fill="${i === 20 ? a : c}"/>`).join('')}</svg>`;
+const mRipple = (c = '#2F3D2E', a = '#C4553A') => `<svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><circle cx="60" cy="60" r="10" fill="${a}"/><circle cx="60" cy="60" r="24" stroke="${c}" stroke-width="5"/><circle cx="60" cy="60" r="38" stroke="${c}" stroke-opacity=".6" stroke-width="5"/><circle cx="60" cy="60" r="52" stroke="${c}" stroke-opacity=".3" stroke-width="5"/></svg>`;
+
+const BED_L = 'M24 50.5C19 46 19 32 26 27.5c6-3.5 15-3.5 20-1.5l19.6 24.3z';
+const BED_R = 'M80 18.5c10-1 25 1.5 40 6.5 12 4 20 11 19 19-1 5-4 7-8 7h-18.5L97 28.7C92 26 85 25.5 80 25c-4-.5-4-6 0-6.5z';
+const mSanct = (c = '#3F4D36', a = '#D6A22E') => `<svg viewBox="16 14 128 40" aria-hidden="true"><path d="${BED_L}" fill="${c}"/><path d="${BED_R}" fill="${c}"/><rect x="74" y="32" width="10" height="9.5" fill="${a}"/></svg>`;
+const mSanctPlan = (c = '#3F4D36', a = '#D6A22E') => `<svg viewBox="0 0 160 70" aria-hidden="true"><path d="M10 50.5V28Q80-4 150 28v22.5" fill="none" stroke="#B9B09F" stroke-width="2.2"/><path d="${BED_L}" fill="${c}"/><path d="${BED_R}" fill="${c}"/><rect x="74" y="32" width="10" height="9.5" fill="${a}"/><path d="M4 51.5h152" stroke="#B9B09F" stroke-width="1.4"/><circle cx="53.7" cy="60" r="6.5" fill="#8A9A6B"/><circle cx="80.9" cy="60" r="6.5" fill="#8A9A6B"/><circle cx="110.4" cy="60" r="6.5" fill="#8A9A6B"/></svg>`;
+const mSanctSeal = (c = '#3F4D36', a = '#D6A22E') => `<svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="${c}"/><g transform="translate(60 62) scale(.62) translate(-80 -36)"><path d="M10 50.5V28Q80-4 150 28v22.5" fill="none" stroke="#8A9A6B" stroke-width="2.6"/><path d="${BED_L}" fill="#F4EFE4"/><path d="${BED_R}" fill="#F4EFE4"/><rect x="74" y="32" width="10" height="9.5" fill="${a}"/></g></svg>`;
+
+const PT = {
+  H: 'M409 455C420.3 466.9 430.9 480.9 444 490.8C486.7 523.2 546.5 541.7 597 516.4C613.4 508.2 628.8 494.7 643.1 483.2C663.2 467 679.5 451.8 689 427C721.8 341.2 700.7 172.5 653 95C623.3 87.1 595.6 82.3 565 88.6C505.5 100.8 391.5 181.3 378.8 243C373.4 269.6 388.5 368.1 394.6 398C398.6 417.1 406.8 435.8 409 455C399.1 460.9 389.4 460.9 378 461.5C328.9 464.4 334 396.9 334 363C334 296.4 360.4 160.6 392.5 103C401.6 86.8 415.8 72.5 431 62.2C471.1 35.1 565.5 25.3 610 44.9C624.7 51.4 634.5 63.3 647 72.7C663.9 85.4 674.1 80.7 688.5 102C727.1 159 734.5 232.8 744.2 299C753.1 359 769.6 419 727 471C713.2 470.8 699.8 471.5 686 472C683 466 679.9 460.5 676 454',
+  LC: 'M436 488C429 494.5 419.5 501.7 417.9 512C411.6 555.2 501.8 649.5 530 682',
+  RS: 'M637 496C645 497.6 647.5 497.5 653 503C656 532.6 658.1 536.2 667 564C684.2 575.9 704.1 584.1 722 595.2C746 610 768.7 627.5 794 640.2C837.3 661.8 843 647.1 881.2 692C907.3 722.6 921.9 782.5 930 822',
+  CD: 'M414 819C465.3 760.2 516.6 701.4 567.2 642C584.6 621.6 622.9 583.7 631.5 559.8C637.6 543 635.4 509.3 635 491',
+  B: 'M842 655C853.5 640.9 871.7 623.1 868.8 603C867.9 597.2 865.1 591.9 864.5 586C863.1 569.9 862.5 558.2 852 545C845.4 544.2 839.4 543.8 833 546.2C820.3 551.1 791.3 578.2 786.4 591C781.4 604.2 782.4 617.2 783 631',
+  LS: 'M417 527C414.6 536.1 411.9 545 409 554C348.7 586.5 267.9 614.9 220.4 664C178.9 706.7 160.5 764.5 146 821'
+};
+const ptLines = (c, sw, a) => `<g fill="none" stroke="${c}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${['H', 'LC', 'LS', 'RS', 'CD', 'B'].map((k) => `<path d="${PT[k]}"${k === 'B' && a ? ` stroke="${a}"` : ''}/>`).join('')}</g>`;
+const mPortrait = (c = '#33402F', a = '#B5532F', sw = 30) => `<svg viewBox="130 18 816 816" aria-hidden="true">${ptLines(c, sw, a)}</svg>`;
+let clipN = 0;
+const mPortraitBadge = (c = '#33402F', a = '#D9774F') => { const id = 'pc' + (++clipN); return `<svg viewBox="88 -25 900 900" aria-hidden="true"><defs><clipPath id="${id}"><circle cx="538" cy="425" r="440"/></clipPath></defs><circle cx="538" cy="425" r="440" fill="${c}"/><g clip-path="url(#${id})"><g transform="translate(538 470) scale(.78) translate(-538 -425)">${ptLines('#F2EEE6', 30, a)}</g></g></svg>`; };
+const mPortraitArch = (c = '#33402F', a = '#B5532F') => `<svg viewBox="88 -25 900 900" aria-hidden="true"><path d="M168 860V430a370 370 0 0 1 740 0v430" fill="none" stroke="${c}" stroke-width="16" stroke-linecap="round"/><g transform="translate(538 520) scale(.68) translate(-538 -425)">${ptLines(c, 34, a)}</g></svg>`;
+const mShoulder = (c = '#33402F', a = '#B5532F') => `<svg viewBox="560 390 460 460" aria-hidden="true"><g fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="${PT.RS}" stroke="${c}"/><path d="${PT.B}" stroke="${a}"/></g></svg>`;
+
+const BADGE = {
+  H: 'M53.9467 80.7333C55.3529 82.2142 56.672 83.9564 58.3023 85.1884C63.616 89.2204 71.0578 91.5226 77.3423 88.3742C79.3832 87.3537 81.2996 85.6737 83.0792 84.2426C85.5805 82.2266 87.6089 80.3351 88.7912 77.2489C92.8729 66.5715 90.2472 45.5777 84.3112 35.9333C80.6152 34.9502 77.1681 34.3529 73.3601 35.1369C65.9556 36.6551 51.7689 46.6729 50.1885 54.3511C49.5165 57.6613 51.3956 69.9191 52.1547 73.64C52.6525 76.0169 53.6729 78.344 53.9467 80.7333ZM53.9467 80.7333C52.7147 81.4675 51.5076 81.4675 50.0889 81.5422C43.9787 81.9031 44.6134 73.5031 44.6134 69.2844C44.6134 60.9964 47.8987 44.0969 51.8934 36.9289C53.0258 34.9129 54.7929 33.1333 56.6845 31.8515C61.6747 28.4791 73.4223 27.2595 78.9601 29.6986C80.7894 30.5075 82.0089 31.9884 83.5645 33.1582C85.6676 34.7386 86.9369 34.1537 88.7289 36.8044C93.5325 43.8977 94.4534 53.0817 95.6605 61.32C96.7681 68.7866 98.8214 76.2533 93.5201 82.7244C91.8027 82.6995 90.1352 82.7866 88.4178 82.8489C88.0445 82.1022 87.6587 81.4177 87.1734 80.6089',
+  LC: 'M57.3067 84.84C56.4356 85.6489 55.2534 86.5449 55.0542 87.8266C54.2702 93.2026 65.4951 104.938 69.0045 108.982',
+  LS: 'M54.9422 89.6934C54.6436 90.8258 54.3076 91.9334 53.9467 93.0534C46.4427 97.0978 36.3876 100.632 30.4764 106.742C25.312 112.056 23.0222 119.249 21.2178 126.28L14.8 151.5',
+  RS: 'M82.3199 85.8356C83.3155 86.0347 83.6266 86.0222 84.3111 86.7067C84.6844 90.3902 84.9457 90.8382 86.0533 94.2978C88.1937 95.7787 90.6702 96.7991 92.8977 98.1805C95.8844 100.022 98.7093 102.2 101.858 103.78C107.246 106.468 107.956 104.639 112.709 110.227C115.957 114.035 117.774 121.489 118.782 126.404L124 151.9',
+  CD: 'M37.5 145.6L54.5688 126.031C60.9528 118.714 67.3368 111.396 73.6337 104.004C75.7991 101.466 80.5653 96.7493 81.6355 93.775C82.3946 91.6844 82.1208 87.4906 82.0711 85.2133',
+  B: 'M107.831 105.622C109.262 103.868 111.527 101.652 111.166 99.1511C111.054 98.4293 110.706 97.7697 110.631 97.0355C110.457 95.0319 110.382 93.5759 109.076 91.9333C108.254 91.8337 107.508 91.7839 106.711 92.0826C105.131 92.6924 101.522 96.0648 100.912 97.6577C100.29 99.3004 100.414 100.918 100.489 102.636'
+};
+// Portrait badge from Figma (Statue of Peace — Line Art, node 6:27); shirt lines run out to the circle's edge
+const mBadge = (bg = '#33402F', c = '#F2EEE6', a = '#D9774F') => { const id = 'bm' + (++clipN); return `<svg viewBox="0 0 140 140" aria-hidden="true"><defs><clipPath id="${id}"><circle cx="70" cy="70" r="68.44"/></clipPath></defs><circle cx="70" cy="70" r="68.44" fill="${bg}"/><g clip-path="url(#${id})" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${['H', 'LC', 'LS', 'RS', 'CD'].map((k) => `<path d="${BADGE[k]}" stroke="${c}"/>`).join('')}<path d="${BADGE.B}" stroke="${c}"/></g></svg>`; };
+
+const mLeafBird = (c = '#33402F', a = '#E8892B', b = '#1D1F1A') => `<svg viewBox="16 12 128 42" aria-hidden="true"><path d="${BED_R}" fill="${a}"/><path d="${BED_R}" fill="${c}" transform="translate(158 0) scale(-1 1)"/><rect x="74" y="30" width="10" height="11" fill="${b}"/><circle cx="79" cy="23.5" r="4" fill="${b}"/></svg>`;
+const mLeafBirdPlanted = (c = '#33402F', a = '#E8892B', b = '#1D1F1A') => `<svg viewBox="16 12 128 42" aria-hidden="true"><path d="${BED_L}" fill="${c}"/><path d="${BED_R}" fill="${a}"/><rect x="74" y="32" width="10" height="9.5" fill="${b}"/><circle cx="79" cy="26.5" r="4" fill="${b}"/></svg>`;
+const mLeafBirdRising = (c = '#C3CDB3', a = '#E8892B', b = '#FBF3E8') => `<svg viewBox="16 6 128 56" aria-hidden="true"><g transform="rotate(-12 79 34)"><path d="${BED_R}" fill="${a}"/><path d="${BED_R}" fill="${c}" transform="translate(158 0) scale(-1 1)"/><rect x="74" y="30" width="10" height="11" fill="${b}"/><circle cx="79" cy="23.5" r="4" fill="${b}"/></g><path d="M20 58h120" stroke="${c}" stroke-width="1.6" stroke-dasharray="3 4"/></svg>`;
+
+const mEmbrace = (c = '#3F4D36', a = c) => `<svg viewBox="2 8 116 88" aria-hidden="true"><g fill="${c}" stroke="${c}" stroke-width="3" stroke-linejoin="round"><path d="M9.5 90.5C9.5 52 29 23.5 48.5 16v13C33 39 24.5 62 24.5 90.5z"/><path d="M110.5 90.5C110.5 52 91 23.5 71.5 16v13c15.5 10 24 33 24 61.5z"/></g><rect x="52" y="52" width="16" height="16" rx="2.5" fill="${a}"/></svg>`;
+const mLeafFlower = (l = '#33402F', r = l, h = l) => `<svg viewBox="10 14 100 70" aria-hidden="true"><path d="M60 78C40 78 22 64 16 40c22 0 40 16 44 38z" fill="${l}"/><path d="M60 78c20 0 38-14 44-38-22 0-40 16-44 38z" fill="${r}"/><circle cx="60" cy="29" r="10.5" fill="${h}"/></svg>`;
+
+
+/* ======================= Shared slide pieces ======================= */
+const typeSlide = (o) => `
+  <div class="s">
+    <div class="tag">${esc(o.kicker)} · Type &amp; color</div>
+    <h4>The toolkit</h4>
+    <div class="fonts">${o.fonts.map((f) => `<div><span class="aa" style="font-family:${f[2]}">${f[3] || 'Aa'}</span><span><b>${esc(f[0])}</b> · ${esc(f[1])}</span></div>`).join('')}</div>
+    <div class="swatches" style="--n:${o.colors.length}">${o.colors.map((c) => `<div><i style="background:${c[0]}"></i><b>${esc(c[1])}</b><span class="muted">${c[0].toUpperCase()}</span></div>`).join('')}</div>
+  </div>`;
+
+const wordmark = (color, size, two = true) => `<span class="wm" style="color:${color};font-size:${size}cqw">${two ? 'Philadelphia<br>Peace Plaza' : 'Philadelphia Peace Plaza'}</span>`;
+
+/* ======================= Brand (shared by every website direction) ======================= */
+
+
+/* ======================= Website directions ======================= */
+const site = (o) => ({
+  ...o, name: `Direction ${o.letter}`, kind: 'site', kicker: `Direction ${o.letter}`,
+  slides: [
+    ['Prototype', () => `
+      <div class="s proto">
+        <div class="proto-head">
+          <h4>Prototype</h4>
+          <div class="tools">
+            ${o.site.length > 1 ? o.site.map((s, k) => `<button data-view="${k}" aria-pressed="${k === 0}">${esc(o.siteLabels[k])}</button>`).join('') : ''}
+            <a href="${o.site[0]}" target="_blank" rel="noopener" class="openFull">Open full site ↗</a>
+          </div>
+        </div>
+        <div class="frame"><iframe src="${o.site[0]}index.html?v=25" title="${esc(o.name)} website prototype"></iframe></div>
+      </div>`]
+  ]
+});
+
+const SITES = [
+  site({ id: 'a', letter: '1', name: 'Common Ground', source: 'Options 1 and 2, combined', summary: 'Calm, open and easy to use: the restraint of a minimal layout with warmer cards and panels.', site: ['../option-a/'], bg: '#ffffff', ink: '#16182a',
+    colors: [['#f7f5ef', 'Cream'], ['#161a14', 'Ink'], ['#ede8dc', 'Sand'], ['#e2e7d8', 'Sage'], ['#3d5233', 'Moss'], ['#1b2618', 'Forest'], ['#e8913a', 'Orange']], fonts: [['Hanken Grotesk', 'Headlines and text', "'Hanken Grotesk'"]] }),
+  site({ id: 'b', letter: '2', name: 'Garden', source: 'Option 5', summary: 'A memorial first, a garden second: moss and cream, field-guide labels and the planting through the seasons.', site: ['../option-5/'], bg: '#ffffff', ink: '#262a1e',
+    colors: [['#f2eee3', 'Cream'], ['#3d4630', 'Moss'], ['#6d7348', 'Olive'], ['#b4bca0', 'Sage'], ['#4a3a2b', 'Bark'], ['#d4a43a', 'Witch hazel']], fonts: [['Hanken Grotesk', 'Headlines, labels and text', "'Hanken Grotesk'"]] }),
+  site({ id: 'd', letter: '3', name: 'Poster', source: 'Option 7', summary: 'A story told with conviction: bold stacked type and photography, balanced by very quiet moments.', site: ['../option-7/'], bg: '#ffffff', ink: '#141414',
+    colors: [['#efede8', 'Paper'], ['#141414', 'Black'], ['#5c5a56', 'Grey'], ['#a9a59d', 'Light grey'], ['#ffffff', 'White'], ['#a8231a', 'Signal red']], fonts: [['Big Shoulders Display', 'Headlines', "'Big Shoulders Display', sans-serif"], ['Hanken Grotesk', 'Text and labels', "'Hanken Grotesk'"]] })
+];
+
+/* ======================= Logo options ======================= */
+const CREAM = '#F2EEE6';
+const logoDeck = (o) => ({
+  ...o, kind: 'logo', kicker: `Logo · ${o.name}`, bg: CREAM, ink: '#1D1F1A',
+  slides: [
+    ['Overview', () => `
+      <div class="s"><div class="split">
+        <div class="copy">
+          <div><div class="tag">Logo concept · Overview</div><h3>${esc(o.name)}</h3><p class="lede">${esc(o.meaning)}</p></div>
+        </div>
+        <div class="bigmark" style="background:#fff">${o.mark()}</div>
+      </div></div>`],
+    ['Lockups', () => `
+      <div class="s"><div class="tag">Logo concept · Lockups</div><h4>With the name</h4>
+        <div class="lockups">
+          <div class="lock" style="background:#fff">${o.lockMark(o.lockW || 9)}${wordmark('#1D1F1A', 3.6)}</div>
+          <div class="lock stack" style="background:${o.dark}">${o.lockMarkDark(o.lockW ? o.lockW * .9 : 8)}${wordmark(CREAM, 2.6, false)}</div>
+        </div>
+        <div class="sizes">${[6, 4, 3, 2, 1.4].map((s) => `<div><div style="width:${s}cqw;height:${s}cqw;display:grid;place-items:center">${o.mark()}</div><span>${Math.round(s * 16)}px</span></div>`).join('')}<span style="margin-left:1cqw;text-align:left">Approximate size check</span></div>
+      </div>`]
+  ]
+});
+const sized = (svg, w, h) => svg.replace('<svg ', `<svg width="${w}" height="${h}" style="width:${w}cqw;height:${h}cqw" `);
+
+const LOGOS = [
+  logoDeck({ id: 'logo-portrait', name: 'Portrait', summary: 'The Statue of Peace in line art.', meaning: 'The Statue of Peace itself, in line art: cropped hair, the crossed collar of her dress and the bird on her shoulder. The face is left blank so she stands for every survivor.', bestFor: 'Primary identity, plaques and the website',
+    mark: () => mBadge(), dark: '#33402F',
+    lockMark: (s) => sized(mBadge(), s, s), lockMarkDark: (s) => sized(mBadge('#F2EEE6', '#33402F', '#B5532F'), s, s) }),
+  logoDeck({ id: 'logo-sanctuary', name: 'Sanctuary', summary: 'Abstract cupped hands that shelter a place of memory.', meaning: 'Two garden beds curve up around the statue\'s square like abstract cupped hands: a sanctuary that shelters a memory and holds it gently.', bestFor: 'Signage, plaques and the site itself',
+    mark: () => mEmbrace(), dark: '#3F4D36', lockW: 9,
+    lockMark: (s) => sized(mEmbrace(), s, s * .76), lockMarkDark: (s) => sized(mEmbrace('#F4EFE4'), s, s * .76) }),
+  logoDeck({ id: 'logo-voices', name: 'Many Voices', summary: '21 points in one circle, one for each country.', meaning: 'Twenty-one points, one for each country women were taken from, gathered into one circle. One point is set apart in a warm accent: a single voice, finally heard.', bestFor: 'Multilingual materials, education and partners',
+    mark: () => mVoices(), dark: '#2F3D2E',
+    lockMark: (s) => sized(mVoices(), s, s), lockMarkDark: (s) => sized(mVoices('#EFE6D6', '#E28A72'), s, s) }),
+  logoDeck({ id: 'logo-leafwings', name: 'Leaf Wings', summary: 'A dove and a flower in one: peace taking root and rising.', meaning: 'Two leaves rise from a single stem with a round head above: a dove, the symbol of peace, that is also a flower. Peace takes root in the garden and rises from it.', bestFor: 'Programs, youth outreach and merchandise',
+    mark: () => mLeafFlower(), dark: '#33402F', lockW: 10,
+    lockMark: (s) => sized(mLeafFlower(), s, s * .7), lockMarkDark: (s) => sized(mLeafFlower('#F2EEE6'), s, s * .7) })
+];
+
+/* ======================= Landing ======================= */
+const GROUPS = [
+  { title: 'Preliminary logo concepts', note: '', items: LOGOS, cls: 'four' },
+  { title: 'Website directions', note: '', items: SITES, cls: 'three' }
+];
+const ALL = GROUPS.flatMap((g) => g.items.map((it) => Object.assign(it, { group: g })));
+
+$('groups').innerHTML = GROUPS.map((g) => `
+  <section class="group">
+    <div class="group-head"><h2>${g.title}</h2>${g.note ? `<p>${g.note}</p>` : ''}</div>
+    <ol class="grid ${g.cls}">
+      ${g.items.map((it) => `
+        <li><button class="card" data-open="${it.id}" aria-label="Open ${esc(it.kicker)}">
+          <div class="preview">${
+            it.kind === 'site' ? `<iframe src="${it.site[0]}index.html?v=25" title="" tabindex="-1" loading="lazy" scrolling="no"></iframe>` :
+            `<div style="position:absolute;inset:0;background:${CREAM}"></div><div class="mark">${it.mark()}</div>`
+          }</div>
+          <div class="card-body">
+            <div>
+              
+              <h3>${esc(it.name)}</h3>
+              ${it.kind === 'site' ? '' : `<p>${esc(it.summary)}</p>`}
+            </div>
+            <span class="go" aria-hidden="true">→</span>
+          </div>
+        </button></li>`).join('')}
+    </ol>
+  </section>`).join('');
+
+// Load every face used on the type slides
+const families = ['Schibsted Grotesk', 'Instrument Serif', 'IBM Plex Mono', 'Big Shoulders Display', 'Newsreader', 'Noto Sans KR', 'Noto Sans SC'];
+const fl = document.createElement('link');
+fl.rel = 'stylesheet';
+fl.href = 'https://fonts.googleapis.com/css2?' + families.map((f) => 'family=' + f.replace(/ /g, '+')).join('&') + '&display=swap';
+document.head.appendChild(fl);
+
+const fitFrames = (root = document) => {
+  root.querySelectorAll('.preview, .thumb, .frame').forEach((box) => {
+    const f = box.querySelector('iframe');
+    if (!f) return;
+    const scale = box.clientWidth / 1440;
+    f.style.transform = `scale(${scale})`;
+    if (!box.classList.contains('preview')) f.style.height = (box.clientHeight / scale) + 'px';
+  });
+};
+
+/* ======================= Deck ======================= */
+let cur = null, idx = 0;
+
+function render() {
+  const o = cur, slide = $('slide'), n = o.slides.length;
+  slide.style.setProperty('--s-bg', o.bg);
+  slide.style.setProperty('--s-ink', o.ink);
+  slide.setAttribute('aria-label', `${o.slides[idx][0]}, slide ${idx + 1} of ${n}`);
+  slide.innerHTML = o.slides[idx][1]();
+  $('count').textContent = `${idx + 1} / ${n}`;
+  document.querySelector('.deck-foot').style.visibility = n > 1 ? '' : 'hidden';
+  $('prev').disabled = idx === 0;
+  $('next').disabled = idx === n - 1;
+  $('dots').innerHTML = o.slides.map((s, k) => `<button aria-label="${esc(s[0])}" aria-current="${k === idx}" data-go="${k}"></button>`).join('');
+  requestAnimationFrame(() => fitFrames(slide));
+  if (o.slides[idx][0] === 'Prototype') wirePrototype(o);
+  history.replaceState(null, '', `#${o.id}/${idx + 1}`);
+}
+
+function wirePrototype(o) {
+  const slide = $('slide');
+  const iframe = slide.querySelector('.frame iframe');
+  let view = 0;
+  const load = () => { iframe.src = o.site[view] + 'index.html?v=25'; slide.querySelector('.openFull').href = o.site[view]; };
+  slide.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => {
+    view = +b.dataset.view;
+    slide.querySelectorAll('[data-view]').forEach((x) => x.setAttribute('aria-pressed', x === b));
+    load();
+  }));
+}
+
+function openDeck(id, at = 0) {
+  cur = ALL.find((o) => o.id === id);
+  if (!cur) return;
+  idx = Math.max(0, Math.min(cur.slides.length - 1, at));
+  $('deckTitle').textContent = cur.kind === 'site' ? cur.name : `${cur.group.title} · ${cur.name}`;
+  $('deck').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  render();
+  $('next').focus();
+}
+
+function closeDeck() {
+  $('deck').classList.remove('open');
+  document.body.style.overflow = '';
+  history.replaceState(null, '', location.pathname);
+  const card = cur && document.querySelector(`[data-open="${cur.id}"]`);
+  if (card) card.focus();
+  cur = null;
+}
+
+const go = (d) => { const n = idx + d; if (cur && n >= 0 && n < cur.slides.length) { idx = n; render(); } };
+
+document.addEventListener('click', (e) => {
+  const open = e.target.closest('[data-open]');
+  if (open) return openDeck(open.dataset.open);
+  const dot = e.target.closest('[data-go]');
+  if (dot) { idx = +dot.dataset.go; render(); }
+});
+$('slide').addEventListener('click', (e) => {
+  if (e.target.closest('a, button, .frame')) return;
+  go(1);
+});
+$('prev').addEventListener('click', () => go(-1));
+$('next').addEventListener('click', () => go(1));
+$('back').addEventListener('click', closeDeck);
+document.addEventListener('keydown', (e) => {
+  if (!cur) return;
+  if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(1); }
+  else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
+  else if (e.key === 'Escape') closeDeck();
+});
+window.addEventListener('resize', () => fitFrames(cur ? $('slide') : document));
+fitFrames();
+
+const fromHash = () => {
+  const m = location.hash.match(/^#([a-z-]+)\/(\d+)$/);
+  if (!m) return;
+  if (cur && cur.id === m[1] && idx === +m[2] - 1) return;
+  openDeck(m[1], +m[2] - 1);
+};
+fromHash();
+window.addEventListener('hashchange', fromHash);
+</script>
+</body>
+</html>
