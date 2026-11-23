@@ -675,3 +675,9 @@ html.modal-open { overflow: hidden; }
 .visit-panel { grid-row: auto; }
 .visit-split .map { grid-column: 2; min-height: 460px; }
 @media (max-width: 900px) { .visit-split .map { grid-column: auto; min-height: 0; height: 300px; } }
+
+/* Home visual: rendering with info panel (from option A) */
+.home-visual .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,30,16,0) 40%, rgba(20,30,16,.7)); pointer-events: none; }
+.photo-title { position: absolute; left: clamp(20px, 3vw, 44px); right: clamp(20px, 3vw, 44px); bottom: clamp(44px, 5vw, 64px); z-index: 1; color: #fff; font-size: clamp(2rem, 4.4vw, 4.2rem); font-weight: 700; letter-spacing: -.04em; line-height: 1; max-width: 11em; }
+.home-visual .hero-photo figcaption { z-index: 1; left: clamp(20px, 3vw, 44px); }
+.home-visual .info-panel { background: var(--moss); }
