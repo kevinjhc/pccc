@@ -7,8 +7,8 @@
   <meta name="description" content="A place for remembrance, reflection, and peace, and home of the Statue of Peace at 805 S. Front Street, Philadelphia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -19,10 +19,11 @@
   </a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
   <nav class="nav" id="nav" aria-label="Main">
-    <a href="#statue">The Statue of Peace</a>
-    <a href="#history">History</a>
-    <a href="#visit">Visit</a>
-    <a href="#support">Support</a>
+    <a class="roll" href="#statue" data-label="The Statue of Peace"><span>The Statue of Peace</span></a>
+    <a class="roll" href="#history" data-label="History"><span>History</span></a>
+    <a class="roll" href="#visit" data-label="Visit"><span>Visit</span></a>
+    <a class="roll" href="#support" data-label="Support"><span>Support</span></a>
+    <a class="roll" href="about.html" data-label="About"><span>About</span></a>
     <a class="btn" href="#donate">Donate</a>
   </nav>
 </header>
@@ -34,17 +35,17 @@
     <h1 class="hero-type" id="hero-title">
       <span class="ln ln-a">Philadelphia</span>
       <span class="ln ln-b">
-        <span class="hero-inset" aria-hidden="true"><img src="../images/hands.jpg" alt=""></span>
+        <span class="hero-inset"><img src="../images/hands.jpg" alt="Visitors wearing wristbands hold the bronze hands of the Statue of Peace"><span class="inset-cap">Visitors hold the statue’s hands</span></span>
         <span>Peace</span>
       </span>
       <span class="ln ln-c">Plaza</span>
     </h1>
-    <a class="scroll-cue" href="#welcome"><span>Scroll</span><span class="arr-down" aria-hidden="true">↓</span></a>
+    <a class="scroll-cue" href="#welcome"><span class="cue-ring" aria-hidden="true"><span class="arr-down">↓</span></span><span>Scroll to explore</span></a>
   </section>
 
   <!-- Home -->
   <section class="pad section" id="welcome">
-    <p class="lg fill welcome">Welcome to the Philadelphia Peace Plaza, located at 805 S. Front Street in Philadelphia, PA. This public space honors the victims of sexual violence during World War II and their decades-long campaign for recognition, and offers a welcoming space to peace seekers.</p>
+    <p class="lg fill welcome">Welcome to the Philadelphia Peace Plaza. This public space honors the victims of sexual violence during World War II and their decades-long campaign for recognition, and offers a welcoming space to peace seekers.</p>
   </section>
 
   <section class="banner">
@@ -58,12 +59,20 @@
   <!-- The Statue of Peace -->
   <section class="pad section" id="statue">
     <div class="cols">
-      <figure class="c-5 statue-photo">
-        <img src="../images/statue.jpg" alt="Bronze Statue of Peace: a seated girl beside an empty wooden chair, a small bird on her shoulder" loading="lazy">
+      <figure class="c-6 statue-photo">
+        <div class="statue-frame">
+          <img src="../images/statue.jpg" alt="Bronze Statue of Peace: a seated girl beside an empty wooden chair, a small bird on her shoulder" loading="lazy">
+          <span class="spot" data-spot="girl" style="left:70.3%;top:13%"></span>
+          <span class="spot" data-spot="chair" style="left:45%;top:42%"></span>
+          <span class="spot" data-spot="bird" style="left:75.5%;top:21%"></span>
+          <span class="spot" data-spot="shadow" style="left:59%;top:62%"></span>
+          <span class="spot" data-spot="butterfly" style="left:64%;top:73%"></span>
+          <span class="spot-label" aria-live="polite">The girl</span>
+        </div>
         <figcaption class="label">The Statue of Peace by Kim Seo-Kyung and Kim Unsung</figcaption>
       </figure>
       <div class="s-7 statue-text">
-        <span class="eyebrow">The Statue of Peace</span>
+        <span class="chapter"><b>01</b><span>The Statue of Peace</span></span>
         <h2 class="lg">A seated girl, and an empty chair beside her</h2>
         <dl class="specs">
           <div><dt>Height</dt><dd>4½ ft</dd></div>
@@ -72,11 +81,16 @@
           <div><dt>Material</dt><dd>Bronze</dd></div>
         </dl>
         <div class="prose grey">
-          <p>The Statue of Peace is a bronze sculpture that portrays a seated young girl with short, torn hair, bare heels, and clenched fists. There is an empty chair next to her inviting the viewers to sit down and join her.</p>
-          <p>She symbolizes the over 200,000 girls and women from 21 countries who were sexually enslaved by the Japanese Imperial Armed Forces during WWII. Commonly known as “comfort women,” this euphemistic term hid the reality of state-sanctioned and institutionalized rape. These girls and women were often tricked and forcibly kidnapped to work in “comfort stations” to serve the Japanese military.</p>
-          <p>Perched on the girl’s left shoulder is a bird, symbolizing peace and the bond between the living and the dead. Embedded in the base as a mosaic is a figure of an older woman, the shadow of the seated girl, to represent the time that has passed and the refusal by comfort women to remain silent. Positioned over the heart of the elderly woman is a white butterfly, symbolizing the spirit of the comfort women who have already passed and hope.</p>
-          <p>The statue is sculpted by Kim Seo-Kyung and Kim Unsung.</p>
+          <p>The Statue of Peace is a bronze sculpture. She symbolizes the over 200,000 girls and women from 21 countries who were sexually enslaved by the Japanese Imperial Armed Forces during WWII. Commonly known as “comfort women,” this euphemistic term hid the reality of state-sanctioned and institutionalized rape. These girls and women were often tricked and forcibly kidnapped to work in “comfort stations” to serve the Japanese military.</p>
         </div>
+        <ol class="symbols">
+          <li data-spot="girl" class="is-on"><span class="sym-n">01</span><div><h3 class="h3">The girl</h3><p>A seated young girl with short, torn hair, bare heels, and clenched fists.</p></div></li>
+          <li data-spot="chair"><span class="sym-n">02</span><div><h3 class="h3">The empty chair</h3><p>There is an empty chair next to her inviting the viewers to sit down and join her.</p></div></li>
+          <li data-spot="bird"><span class="sym-n">03</span><div><h3 class="h3">The bird</h3><p>Perched on the girl’s left shoulder is a bird, symbolizing peace and the bond between the living and the dead.</p></div></li>
+          <li data-spot="shadow"><span class="sym-n">04</span><div><h3 class="h3">The shadow</h3><p>Embedded in the base as a mosaic is a figure of an older woman, the shadow of the seated girl, to represent the time that has passed and the refusal by comfort women to remain silent.</p></div></li>
+          <li data-spot="butterfly"><span class="sym-n">05</span><div><h3 class="h3">The white butterfly</h3><p>Positioned over the heart of the elderly woman is a white butterfly, symbolizing the spirit of the comfort women who have already passed and hope.</p></div></li>
+        </ol>
+        <p class="grey sculptors">The statue is sculpted by Kim Seo-Kyung and Kim Unsung.</p>
         <div class="card sage callout">
           <div class="callout-num"><strong>18th</strong><span>around the world</span></div>
           <div class="callout-num"><strong>7th</strong><span>in the United States</span></div>
@@ -91,15 +105,17 @@
     <div class="dark-inner">
       <div class="cols head">
         <div class="c-6">
-          <span class="eyebrow">History</span>
+          <span class="chapter"><b>02</b><span>History</span></span>
           <h2 class="lg">One testimony broke the silence</h2>
         </div>
       </div>
-      <div class="stats">
-        <div><strong>200,000+</strong><span>girls and women forced into sexual slavery</span></div>
-        <div><strong>1930s–1945</strong><span>the years the “comfort stations” operated</span></div>
-        <div><strong>Aug 14, 1991</strong><span>Kim Hak-soon comes forward with her testimony</span></div>
-      </div>
+      <ol class="years" aria-label="Timeline">
+        <li class="is-on"><button type="button"><strong>1930s</strong><span>From the 1930s to 1945, over 200,000 girls and women are forced into sexual slavery.</span></button></li>
+        <li><button type="button"><strong>1991</strong><span>On August 14, Kim Hak-soon breaks the silence with her public testimony.</span></button></li>
+        <li><button type="button"><strong>2011</strong><span>The first Statue of Peace is installed in Seoul, South Korea.</span></button></li>
+        <li><button type="button"><strong>2023</strong><span>On July 7, the City of Philadelphia approves the Peace Plaza.</span></button></li>
+        <li><button type="button"><strong>2028</strong><span>The Philadelphia Peace Plaza opens to the public.</span></button></li>
+      </ol>
       <div class="history-text">
         <p>In an often-silenced chapter of World War II history, over 200,000 girls and women were forced into sexual slavery by the Japanese Imperial Armed Forces from the 1930s to 1945. These girls and women were abducted, tricked, coerced, or held in debt bondage and sent to military-run or military-sanctioned brothels known as “comfort stations” and forced into daily sexual violence, abuse and torture.</p>
         <p>One courageous testimony, however, broke the longstanding silence. On August 14, 1991, Kim Hak-soon came forward with her harrowing story, so that no one else would go through what she had experienced. Comfort women survivors worldwide have since advocated for women’s rights, peace, and justice. Their courageous and resilient efforts toward a world without war and violence against women have resonated with citizens around the world, who started grassroots efforts to build the Statue of Peace to honor the survivors’ decades-long calls for justice and remembrance.</p>
@@ -109,30 +125,33 @@
 
   <!-- Visit -->
   <section class="pad section" id="visit">
-    <div class="cols head">
-      <div class="c-6">
-        <span class="eyebrow">Visit</span>
+    <div class="visit-split">
+      <div class="visit-panel">
+        <span class="chapter"><b>03</b><span>Visit</span></span>
         <h2 class="lg">Opening Fall 2028</h2>
+        <p>Opening Fall 2028 at 805 S. Front Street. To find out about future programs that will start in Spring 2027 and to get behind-the-scenes updates of the plaza renovation, follow our journey.</p>
+        <div class="panel-actions">
+          <button class="btn btn--light" type="button" data-open-signup>Follow our journey <span class="arr">→</span></button>
+        </div>
       </div>
-      <p class="grey side-note">Opening Fall 2028 at 805 S. Front Street. Future programs start in Spring 2027. To find out about them and get behind-the-scenes updates on the plaza renovation, <button class="text-btn" type="button" data-open-signup>follow our journey</button>.</p>
+      <div class="map">
+        <iframe title="Map of 805 S. Front Street, Philadelphia" src="https://www.google.com/maps?q=805+S+Front+St,+Philadelphia,+PA+19147&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="map-chip" href="https://maps.google.com/?q=805+S+Front+St+Philadelphia+PA+19147" target="_blank" rel="noopener">Get directions <span class="arr">→</span></a>
+      </div>
     </div>
-    <figure class="visit-photo">
-      <img src="../images/view-south.jpg" alt="Rendering of the plaza from Front Street with native plantings and a sidewalk" loading="lazy">
-      <figcaption class="chip">Rendering: TEND landscape architects</figcaption>
-    </figure>
     <ol class="phases">
-      <li class="done"><span class="phase-n">Phase 1</span><h3 class="h3">Approval</h3><p class="grey">Approved by the City of Philadelphia on July 7, 2023.</p></li>
-      <li class="now"><span class="phase-n">Phase 2</span><h3 class="h3">Design development</h3><p class="grey">In progress</p></li>
-      <li><span class="phase-n">Phase 3</span><h3 class="h3">Construction</h3><p class="grey">Upcoming</p></li>
-      <li><span class="phase-n">Phase 4</span><h3 class="h3">Unveiling</h3><p class="grey">Fall 2028</p></li>
+      <li class="done"><span class="phase-dot" aria-label="Complete"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="currentColor"/><path d="M10 16.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="phase-n">Phase 1</span><h3 class="h3">Approval</h3><p class="grey">Approved by the City of Philadelphia on July 7, 2023.</p></li>
+      <li class="now"><span class="phase-dot" aria-label="In progress"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 4a12 12 0 0 0 0 24z" fill="currentColor"/></svg></span><span class="phase-n">Phase 2</span><h3 class="h3">Design development</h3><p class="grey">In progress</p></li>
+      <li><span class="phase-dot" aria-label="Not started"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span class="phase-n">Phase 3</span><h3 class="h3">Construction</h3><p class="grey">Upcoming</p></li>
+      <li><span class="phase-dot" aria-label="Not started"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span class="phase-n">Phase 4</span><h3 class="h3">Unveiling</h3><p class="grey">Fall 2028</p></li>
     </ol>
   </section>
 
   <!-- Support -->
-  <section class="pad section rule" id="support">
+  <section class="pad section band" id="support">
     <div class="cols head">
       <div class="c-6">
-        <span class="eyebrow">Support</span>
+        <span class="chapter"><b>04</b><span>Support</span></span>
         <h2 class="lg">Stand with survivors</h2>
       </div>
     </div>
@@ -142,11 +161,6 @@
         <p class="md">Your donation is more than a contribution. It is an act of solidarity.</p>
         <p>Every dollar supports a global effort to advocate for the recognition and dignity of the forgotten faces of armed conflicts: victims of sexual violence.</p>
         <div class="bottom"><a class="btn btn--light" href="mailto:admin@phillypeaceplaza.org?subject=Donation">Stand with survivors. Support the Peace Plaza. <span class="arr">→</span></a></div>
-      </div>
-      <div class="card sand">
-        <h3 class="h3">Follow the journey</h3>
-        <p class="grey">Join our email list to receive exclusive access to our latest updates and events.</p>
-        <div class="bottom"><button class="link text-btn" type="button" data-open-signup>Join the email list <span class="arr">→</span></button></div>
       </div>
       <div class="card sand">
         <h3 class="h3">Volunteer</h3>
@@ -161,9 +175,33 @@
     </div>
   </section>
 
+  <!-- Questions -->
+  <section class="pad section" id="faq">
+    <div class="cols">
+      <div class="c-5 faq-head">
+        <span class="chapter"><b>05</b><span>Questions</span></span>
+        <h2 class="lg">Planning a visit</h2>
+        <p class="grey">Can’t find what you’re looking for? <a class="link" href="mailto:admin@phillypeaceplaza.org">Contact us</a>.</p>
+      </div>
+      <div class="s-7 faq">
+        <details><summary>When does the plaza open?</summary><p>The Philadelphia Peace Plaza opens in Fall 2028 at 805 S. Front Street. Programs begin in Spring 2027.</p></details>
+        <details><summary>Can I sit in the empty chair?</summary><p>Yes. The empty chair beside the girl invites viewers to sit down and join her.</p></details>
+        <details><summary>Is it free to visit?</summary><p>Yes. The Peace Plaza is a public space, welcoming to everyone who seeks peace.</p></details>
+        <details><summary>Is the plaza accessible?</summary><p><span class="tbd">[copy to come]</span></p></details>
+        <details><summary>How is my donation used?</summary><p>Every dollar supports a global effort to advocate for the recognition and dignity of the forgotten faces of armed conflicts: victims of sexual violence. <a class="link" href="#donate">Donate</a></p></details>
+        <details><summary>How can I volunteer?</summary><p>Volunteers help maintain the premises and support programming. <a class="link" href="mailto:admin@phillypeaceplaza.org?subject=Volunteering">Volunteer with us</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
+  <div class="footer-cta">
+    <h2 class="footer-cta-title">Stand with survivors. Support the Peace Plaza.</h2>
+    <a class="btn btn--light btn--lg" href="#donate">Donate <span class="arr">→</span></a>
+  </div>
+
   <div class="footer-top">
     <div class="footer-brand">
       <a class="brand brand--lg" href="index.html"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><clipPath id="logo-clip"><circle cx="70" cy="70" r="68.44"/></clipPath></defs><circle cx="70" cy="70" r="68.44" fill="#3d5233"/><g clip-path="url(#logo-clip)" fill="none" stroke="#f7f5ef" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M53.9467 80.7333C55.3529 82.2142 56.672 83.9564 58.3023 85.1884C63.616 89.2204 71.0578 91.5226 77.3423 88.3742C79.3832 87.3537 81.2996 85.6737 83.0792 84.2426C85.5805 82.2266 87.6089 80.3351 88.7912 77.2489C92.8729 66.5715 90.2472 45.5777 84.3112 35.9333C80.6152 34.9502 77.1681 34.3529 73.3601 35.1369C65.9556 36.6551 51.7689 46.6729 50.1885 54.3511C49.5165 57.6613 51.3956 69.9191 52.1547 73.64C52.6525 76.0169 53.6729 78.344 53.9467 80.7333ZM53.9467 80.7333C52.7147 81.4675 51.5076 81.4675 50.0889 81.5422C43.9787 81.9031 44.6134 73.5031 44.6134 69.2844C44.6134 60.9964 47.8987 44.0969 51.8934 36.9289C53.0258 34.9129 54.7929 33.1333 56.6845 31.8515C61.6747 28.4791 73.4223 27.2595 78.9601 29.6986C80.7894 30.5075 82.0089 31.9884 83.5645 33.1582C85.6676 34.7386 86.9369 34.1537 88.7289 36.8044C93.5325 43.8977 94.4534 53.0817 95.6605 61.32C96.7681 68.7866 98.8214 76.2533 93.5201 82.7244C91.8027 82.6995 90.1352 82.7866 88.4178 82.8489C88.0445 82.1022 87.6587 81.4177 87.1734 80.6089"/><path d="M57.3067 84.84C56.4356 85.6489 55.2534 86.5449 55.0542 87.8266C54.2702 93.2026 65.4951 104.938 69.0045 108.982"/><path d="M54.9422 89.6934C54.6436 90.8258 54.3076 91.9334 53.9467 93.0534C46.4427 97.0978 36.3876 100.632 30.4764 106.742C25.312 112.056 23.0222 119.249 21.2178 126.28L14.8 151.5"/><path d="M82.3199 85.8356C83.3155 86.0347 83.6266 86.0222 84.3111 86.7067C84.6844 90.3902 84.9457 90.8382 86.0533 94.2978C88.1937 95.7787 90.6702 96.7991 92.8977 98.1805C95.8844 100.022 98.7093 102.2 101.858 103.78C107.246 106.468 107.956 104.639 112.709 110.227C115.957 114.035 117.774 121.489 118.782 126.404L124 151.9"/><path d="M37.5 145.6L54.5688 126.031C60.9528 118.714 67.3368 111.396 73.6337 104.004C75.7991 101.466 80.5653 96.7493 81.6355 93.775C82.3946 91.6844 82.1208 87.4906 82.0711 85.2133"/><path d="M107.831 105.622C109.262 103.868 111.527 101.652 111.166 99.1511C111.054 98.4293 110.706 97.7697 110.631 97.0355C110.457 95.0319 110.382 93.5759 109.076 91.9333C108.254 91.8337 107.508 91.7839 106.711 92.0826C105.131 92.6924 101.522 96.0648 100.912 97.6577C100.29 99.3004 100.414 100.918 100.489 102.636"/></g></svg><span>Philadelphia<br>Peace Plaza</span></a>
@@ -171,8 +209,11 @@
     </div>
     <div class="footer-follow">
       <h4>Follow the journey</h4>
-      <p class="grey">Updates on the plaza, programs, and events.</p>
-      <button class="btn" type="button" data-open-signup>Join the email list <span class="arr">→</span></button>
+      <form class="inline-signup" data-inline-signup>
+        <label for="foot-email" class="sr-only">Email address</label>
+        <input id="foot-email" type="email" placeholder="Your email" autocomplete="email" required>
+        <button type="submit" aria-label="Sign up">→</button>
+      </form>
     </div>
     <div>
       <h4>Menu</h4>
@@ -185,29 +226,29 @@
       </ul>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4>Connect</h4>
       <ul>
         <li><a href="mailto:admin@phillypeaceplaza.org">admin@phillypeaceplaza.org</a></li>
+        <li><a href="https://www.instagram.com/phillypeaceplaza/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/PhillyPeacePlaza/">Facebook</a></li>
       </ul>
     </div>
   </div>
 
-  <div class="social">
-    <a class="social-widget" href="https://www.instagram.com/phillypeaceplaza/">
-      <span class="social-head"><b>Instagram</b><span class="grey">@phillypeaceplaza</span></span>
-      <span class="social-grid" aria-hidden="true">
-        <img src="../images/concert-rondalla.jpg" alt=""><img src="../images/community-picnic.jpg" alt=""><img src="../images/hands.jpg" alt=""><img src="../images/visitors.jpg" alt="">
-      </span>
-      <span class="placeholder-note">Live feed widget</span>
-    </a>
-    <a class="social-widget" href="https://www.facebook.com/PhillyPeacePlaza/">
-      <span class="social-head"><b>Facebook</b><span class="grey">Philadelphia Peace Plaza</span></span>
-      <span class="social-post"><img src="../images/community-market.jpg" alt=""><span>Latest post appears here</span></span>
-      <span class="placeholder-note">Live feed widget</span>
-    </a>
+  <div class="feeds">
+    <div class="feed">
+      <div class="feed-head"><span><b>Instagram</b> <a href="https://www.instagram.com/phillypeaceplaza/">@phillypeaceplaza</a></span><span class="placeholder-note">Live feed</span></div>
+      <div class="feed-row" aria-hidden="true">
+        <img src="../images/concert-rondalla.jpg" alt=""><img src="../images/community-picnic.jpg" alt=""><img src="../images/visitors.jpg" alt=""><img src="../images/hands.jpg" alt="">
+      </div>
+    </div>
+    <div class="feed">
+      <div class="feed-head"><span><b>Facebook</b> <a href="https://www.facebook.com/PhillyPeacePlaza/">Philadelphia Peace Plaza</a></span><span class="placeholder-note">Live feed</span></div>
+      <div class="feed-row" aria-hidden="true">
+        <img src="../images/community-market.jpg" alt=""><img src="../images/concert-strings.jpg" alt=""><img src="../images/statue.jpg" alt=""><img src="../images/view-east.jpg" alt="">
+      </div>
+    </div>
   </div>
-
-  <a class="donate-strip" href="#donate">Stand with survivors. Support the Peace Plaza. <span class="arr">→</span></a>
 
   <div class="fine">
     <span>Philadelphia Peace Plaza Committee. Fiscally sponsored by Asian Arts Initiative.</span>
@@ -220,34 +261,43 @@
   <div class="modal-backdrop" data-close-signup></div>
   <div class="modal-card">
     <button class="modal-close" type="button" aria-label="Close" data-close-signup>×</button>
-    <span class="eyebrow">Follow the journey</span>
-    <h2 class="lg" id="signup-title">Be part of what comes next.</h2>
-    <p class="grey">Join our email list to receive exclusive access to our latest updates and events.</p>
-    <form class="signup-form" id="signup-form">
-      <div class="row2">
-        <label>First name<input name="first" autocomplete="given-name" required></label>
-        <label>Last name<input name="last" autocomplete="family-name" required></label>
-      </div>
-      <div class="row2">
-        <label>Email address<input name="email" type="email" autocomplete="email" required></label>
-        <label>Zip code<input name="zip" inputmode="numeric" autocomplete="postal-code" required></label>
-      </div>
-      <label><span>How did you hear about PPPC? <span class="opt">(optional)</span></span>
-        <select name="heard">
-          <option value="">Choose one</option>
-          <option>Saw the construction or signage</option>
-          <option>Local news</option>
-          <option>Word of mouth</option>
-          <option>An event</option>
-          <option>Social media</option>
-          <option>Other</option>
-        </select>
-      </label>
-      <button class="btn" type="submit">Sign up <span class="arr">→</span></button>
-    </form>
+    <figure class="modal-photo"><img src="../images/hands.jpg" alt="Visitors hold the bronze hands of the Statue of Peace"></figure>
+    <div class="modal-body">
+      <span class="eyebrow">Follow the journey</span>
+      <h2 class="lg" id="signup-title">Be part of what comes next.</h2>
+      <p class="grey">Join our email list to receive exclusive access to our latest updates and events.</p>
+      <form class="signup-form" id="signup-form">
+        <div class="email-row">
+          <label class="sr-only" for="pop-email">Email address</label>
+          <input id="pop-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn" type="submit">Sign up <span class="arr">→</span></button>
+        </div>
+        <details class="more">
+          <summary>Add your name and zip code <span class="opt">(optional)</span></summary>
+          <div class="row2">
+            <label>First name<input name="first" autocomplete="given-name"></label>
+            <label>Last name<input name="last" autocomplete="family-name"></label>
+          </div>
+          <div class="row2">
+            <label>Zip code<input name="zip" inputmode="numeric" autocomplete="postal-code"></label>
+            <label>How did you hear about PPPC?
+              <select name="heard">
+                <option value="">Choose one</option>
+                <option>Saw the construction or signage</option>
+                <option>Local news</option>
+                <option>Word of mouth</option>
+                <option>An event</option>
+                <option>Social media</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+        </details>
+      </form>
+    </div>
   </div>
 </div>
 
-<script src="script.js?v=1"></script>
+<script src="script.js?v=11"></script>
 </body>
 </html>
